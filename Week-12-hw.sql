@@ -27,7 +27,7 @@ create table restaurant (
 	foreign key (user_id) references user (user_id) on delete cascade
 );
 	
-create table dishes (
+create table dish (
 	dish_id int primary key auto_increment not null,
 	user_id int not null,
 	restaurant_id int not null,
