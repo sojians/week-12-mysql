@@ -21,7 +21,6 @@ create table restaurant (
 	user_id int not null,
 	resta_name varchar(50) not null,
 	visit_date timestamp not null default current_timestamp,
-	order_date timestamp not null default current_timestamp,
 	resta_score tinyint(1) not null,
 	resta_city varchar(50) not null,
 	foreign key (user_id) references user (user_id) on delete cascade
@@ -32,6 +31,7 @@ create table dish (
 	user_id int not null,
 	restaurant_id int not null,
 	dish_name varchar(50) not null,
+	order_date timestamp not null default current_timestamp,
 	dish_comment text,
 	dish_price decimal(5,2) not null,
 	resta_score tinyint(1) not null,
